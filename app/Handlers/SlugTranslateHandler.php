@@ -14,7 +14,7 @@ class SlugTranslateHandler
 
         // 初始化配置信息
         $api = 'http://api.fanyi.baidu.com/api/trans/vip/translate?';
-        $appid = config('services.baidu_translate.testid');
+        $appid = config('services.baidu_translate.appid');
         $key = config('services.baidu_translate.key');
         $salt = time();
 
@@ -42,7 +42,6 @@ class SlugTranslateHandler
         $response = $http->get($api.$query);
 
         $result = json_decode($response->getBody(), true);
-        dd($result);
 
         /**
         获取结果，如果请求成功，dd($result) 结果如下：

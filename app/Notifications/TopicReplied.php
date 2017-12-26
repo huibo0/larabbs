@@ -32,7 +32,7 @@ class TopicReplied extends Notification
     public function via($notifiable)
     {
         // 开启通知的频道
-        return ['database','mail'];
+        return ['database']; //以后来配置邮件 todo
     }
 
 

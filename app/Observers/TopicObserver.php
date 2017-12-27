@@ -29,4 +29,9 @@ class TopicObserver
             dispatch(new TranslateSlug($topic));  //todo 升级php版本后来继续做
         }
     }
+
+    public function deleted(Topic $topic)
+    {
+        \DB::table('replies')->where('topic_id', $topic->id)->delete();
+    }
 }

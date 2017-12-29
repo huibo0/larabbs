@@ -26,6 +26,7 @@ trait LastActivedAtHelper
         $now = Carbon::now()->toDateTimeString();
 
         // 数据写入 Redis ，字段已存在会被更新
-        Redis::hSet($hash, $field, $now);
+        $redis = new Redis();
+        $redis->hSet($hash, $field, $now);
     }
 }

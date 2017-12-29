@@ -46,3 +46,5 @@ Route::resource('notifications', 'NotificationsController', ['only' => ['index']
 
 Route::post('collection/post', 'DataCollectionController@post');
 Route::resource('collection', 'DataCollectionController', ['only' => ['index']]);
+
+Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');

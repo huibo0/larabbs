@@ -17,7 +17,7 @@ class User extends Authenticatable
 
     use Traits\ActiveUserHelper;
 
-    use Traits\LastActivedAtHelper;
+//    use Traits\LastActivedAtHelper; todo 安装redis之后来完善这个功能
 
     public function notify($instance)
     {

@@ -66,7 +66,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 
             // 记录用户最后活跃时间
-            \App\Http\Middleware\RecordLastActivedTime::class,
+           //  \App\Http\Middleware\RecordLastActivedTime::class, todo 完善redies之后来解决
         ],
 
         // API 中间件组，应用于 routes/api.php 路由文件
